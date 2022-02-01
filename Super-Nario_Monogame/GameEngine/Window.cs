@@ -1,11 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Super_Nario_Monogame.GameEngine.GameWindow;
 
 namespace Super_Nario_Monogame.GameEngine
 {
-    public class Window : IWindow
+    public class Window
     {
         // Window properties
         public int WindowWidth { get; private set; }
@@ -35,15 +34,6 @@ namespace Super_Nario_Monogame.GameEngine
         public void Draw()
         {
             _spriteBatch.Begin(SpriteSortMode.FrontToBack);
-            // Texture2D texture,
-            // Vector2 position,
-            // Rectangle? sourceRectangle,
-            // Color color,
-            // float rotation,
-            // Vector2 origin,
-            // float scale,
-            // SpriteEffects effects,
-            // float layerDepth
             _spriteBatch.Draw(_backgroundSprite,
                 new Vector2(0, WindowHeight - _mapHeight * _mapUpscale),
                 new Rectangle(3, 3, _mapWidth, _mapHeight), Color.White, 0f,

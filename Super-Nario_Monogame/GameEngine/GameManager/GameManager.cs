@@ -26,7 +26,7 @@ namespace Super_Nario_Monogame.GameEngine.GameManager
 
         public void Update(GameTime gameTime)
         {
-
+            _player.Update(gameTime);
         }
 
         public void Draw()

@@ -28,7 +28,6 @@ namespace Super_Nario_Monogame
 
         protected override void LoadContent()
         {
-            // TODO: use this.Content to load your game content here
             _gameManager.LoadContent(Content, GraphicsDevice);
         }
 
@@ -37,7 +36,6 @@ namespace Super_Nario_Monogame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
             _gameManager.Update(gameTime);
 
             base.Update(gameTime);
@@ -47,7 +45,6 @@ namespace Super_Nario_Monogame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
             _gameManager.Draw();
 
             base.Draw(gameTime);
