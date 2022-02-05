@@ -11,6 +11,8 @@ namespace Super_Nario_Monogame.GameEngine.Enumerators
         CrouchingAhead,
         CrouchingBack,
         JumpingAhead,
-        JumpingBack
+        JumpingBack,
+        WalkingAhead,
+        WalkingBack
     }
 }

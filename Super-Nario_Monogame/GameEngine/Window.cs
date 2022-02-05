@@ -11,12 +11,12 @@ namespace Super_Nario_Monogame.GameEngine
         public int WindowHeight { get; private set; }
 
         // Map variables
-        private readonly int _mapWidth = 3669;
-        private readonly int _mapHeight = 224;
-        private readonly float _mapUpscale = 3;
-        private Texture2D _backgroundSprite;
+        readonly int mapWidth = 3669;
+        readonly int mapHeight = 224;
+        readonly float mapUpscale = 3;
+        Texture2D backgroundSprite;
 
-        private SpriteBatch _spriteBatch;
+        SpriteBatch spriteBatch;
 
 
         public Window(int windowWidth, int windowHeight)
@@ -27,18 +27,18 @@ namespace Super_Nario_Monogame.GameEngine
 
         public void LoadContent(ContentManager content, GraphicsDevice graphics)
         {
-            _spriteBatch = new SpriteBatch(graphics);
-            _backgroundSprite = content.Load<Texture2D>("spritesheets/entireMap");
+            spriteBatch = new SpriteBatch(graphics);
+            backgroundSprite = content.Load<Texture2D>("spritesheets/entireMap");
         }
 
         public void Draw()
         {
-            _spriteBatch.Begin(SpriteSortMode.FrontToBack);
-            _spriteBatch.Draw(_backgroundSprite,
-                new Vector2(0, WindowHeight - _mapHeight * _mapUpscale),
-                new Rectangle(3, 3, _mapWidth, _mapHeight), Color.White, 0f,
-                new Vector2(0, 0), _mapUpscale, SpriteEffects.None, 0f);
-            _spriteBatch.End();
+            spriteBatch.Begin(SpriteSortMode.FrontToBack);
+            spriteBatch.Draw(backgroundSprite,
+                new Vector2(0, WindowHeight - mapHeight * mapUpscale),
+                new Rectangle(3, 3, mapWidth, mapHeight), Color.White, 0f,
+                new Vector2(0, 0), mapUpscale, SpriteEffects.None, 0f);
+            spriteBatch.End();
         }
     }
 }

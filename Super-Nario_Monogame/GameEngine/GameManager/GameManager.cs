@@ -8,31 +8,31 @@ namespace Super_Nario_Monogame.GameEngine.GameManager
 {
     public class GameManager
     {
-        private readonly Player _player = new Player();
-        private readonly Window _window = new Window(1280, 670);
+        private readonly Player player = new Player();
+        private readonly Window window = new Window(1280, 670);
 
         public void Initialize(GraphicsDeviceManager graphics)
         {
-            graphics.PreferredBackBufferWidth = _window.WindowWidth;
-            graphics.PreferredBackBufferHeight = _window.WindowHeight;
+            graphics.PreferredBackBufferWidth = window.WindowWidth;
+            graphics.PreferredBackBufferHeight = window.WindowHeight;
             graphics.ApplyChanges();
         }
 
         public void LoadContent(ContentManager content, GraphicsDevice graphics)
         {
-            _window.LoadContent(content, graphics);
-            _player.LoadContent(content, graphics);
+            window.LoadContent(content, graphics);
+            player.LoadContent(content, graphics);
         }
 
         public void Update(GameTime gameTime)
         {
-            _player.Update(gameTime);
+            player.Update(gameTime);
         }
 
         public void Draw()
         {
-            _window.Draw();
-            _player.Draw();
+            window.Draw();
+            player.Draw();
         }
     }
 }
