@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Super_Nario_Monogame.GameEngine.Enumerators
+﻿namespace Super_Nario_Monogame.GameEngine.Enumerators
 {
     public enum MarioStatus
     {
@@ -14,5 +10,13 @@ namespace Super_Nario_Monogame.GameEngine.Enumerators
         JumpingBack,
         WalkingAhead,
         WalkingBack
+    }
+
+    public enum MarioSize
+    {
+        Normal = 3,
+        Big,
+        Biger,
+        Biggest
     }
 }
